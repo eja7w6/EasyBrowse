@@ -2,32 +2,51 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
     tools:context="evan.anderson.easybrowse.BrowseActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/browser_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+    </android.support.v7.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:orientation="vertical">
+        android:layout_height="42dp"
+        android:orientation="horizontal">
 
         <!-- labelFor is intended for use as an accessibility component, here it points to url_field
          for the sake of removing an IDE error message. -->
         <EditText
-            android:id="@+id/url_field"
-            android:labelFor="@+id/url_field"
-            android:layout_width="match_parent"
+        android:id="@+id/url_field"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textUri"
+        android:labelFor="@+id/url_field"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:visibility="visible" />
+
+        <ImageButton
+            android:id="@+id/search_go_btn"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:ems="10"
-            android:inputType="textUri"
-            android:text=""
-            android:textAppearance="@style/Base.TextAppearance.Widget.AppCompat.Toolbar.Title"
-            android:visibility="visible" />
+            android:layout_weight="0"
+            android:src="@drawable/arrow_right" />
 
     </LinearLayout>
 
     <WebView
+        android:id="@+id/browser_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

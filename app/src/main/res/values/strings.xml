@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EasyBrowse</string>
+    <string name="action_reload">Reload</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_go_btn_description">Go to URL</string>
+    <string name="action_forward">Forward</string>
+    <string name="action_backward">Backward</string>
 </resources>
