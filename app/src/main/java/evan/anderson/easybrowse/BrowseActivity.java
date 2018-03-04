@@ -54,8 +54,10 @@ public class BrowseActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                loadUrl(textFieldURL.getText().toString());
-                addToHistory(textFieldURL.getText().toString());
+                if(loadUrl(textFieldURL.getText().toString()))
+                {
+                    addToHistory(textFieldURL.getText().toString());
+                }
             }
         });
 
@@ -85,6 +87,11 @@ public class BrowseActivity extends AppCompatActivity
                 browserView.reload();
                 break;
             case R.id.action_forward:
+                if(currentPage < (pageHistory.size() - 1))
+                {
+                    currentPage++;
+                    loadUrl(pageHistory.elementAt(currentPage));
+                }
                 break;
             case R.id.action_backward:
                 if(currentPage > 0)
