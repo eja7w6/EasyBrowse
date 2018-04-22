@@ -19,9 +19,22 @@
         android:title="@string/action_forward"
         app:showAsAction="always"/>
 
-    <!-- Settings, should always be in the overflow -->
+    <!-- Below items should always be in the overflow menu -->
+
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_clear_history"
+        android:title="@string/action_clear_history"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_add_to_bookmarks"
+        android:title="@string/action_add_to_bookmarks"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_open_bookmarks"
+        android:title="@string/action_open_bookmarks"
         app:showAsAction="never"/>
 
 </menu>

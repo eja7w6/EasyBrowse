@@ -5,4 +5,9 @@
     <string name="search_go_btn_description">Go to URL</string>
     <string name="action_forward">Forward</string>
     <string name="action_backward">Backward</string>
+    <string name="action_clear_history">Clear History</string>
+    <string name="action_add_to_bookmarks">Add to Bookmarks</string>
+    <string name="action_open_bookmarks">Bookmarks</string>
+    <string name="title_activity_open_bookmarks">OpenBookmarksActivity</string>
+    <string name="action_menu_back">Back</string>
 </resources>
