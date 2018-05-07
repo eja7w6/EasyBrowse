@@ -25,6 +25,7 @@ public class BrowseActivity extends AppCompatActivity
     private Vector<String> pageHistory;
     private Vector<String> bookmarks;
     private int currentPage;
+    private String homeAddress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -68,9 +69,11 @@ public class BrowseActivity extends AppCompatActivity
             }
         });
 
+        homeAddress = "http://www.google.com";
+
         //To do: Add home page, load here.
-        goTo("http://www.google.com");
-        addToHistory("http://www.google.com");
+        goTo(homeAddress);
+        addToHistory(homeAddress);
     }
 
     @Override
@@ -122,6 +125,12 @@ public class BrowseActivity extends AppCompatActivity
                 break;
             case R.id.action_open_bookmarks:
                 openBookmarksActivity();
+                break;
+            case R.id.action_home:
+                goTo(homeAddress);
+                break;
+            case R.id.action_set_home:
+                homeAddress = pageHistory.elementAt(currentPage);
                 break;
         }
 

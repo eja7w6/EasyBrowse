@@ -19,6 +19,8 @@ public class OpenBookmarksActivity extends AppCompatActivity
 
         Toolbar menuToolbar = (Toolbar) findViewById(R.id.menu_toolbar);
         setSupportActionBar(menuToolbar);
+
+        setTitle(R.string.bookmarks_title);
     }
 
     @Override

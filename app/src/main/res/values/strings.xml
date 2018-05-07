@@ -10,4 +10,7 @@
     <string name="action_open_bookmarks">Bookmarks</string>
     <string name="title_activity_open_bookmarks">OpenBookmarksActivity</string>
     <string name="action_menu_back">Back</string>
+    <string name="bookmarks_title">Bookmarks</string>
+    <string name="action_home">Home</string>
+    <string name="action_set_home">Set as home</string>
 </resources>

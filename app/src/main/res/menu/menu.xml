@@ -10,13 +10,19 @@
     <item
         android:id="@+id/action_backward"
         android:icon="@mipmap/ic_backward"
-        android:title="@string/action_forward"
+        android:title="Backward"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/action_forward"
         android:icon="@mipmap/ic_forward"
         android:title="@string/action_forward"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@mipmap/ic_home"
+        android:title="@string/action_home"
         app:showAsAction="always"/>
 
     <!-- Below items should always be in the overflow menu -->
@@ -27,6 +33,10 @@
 
     <item android:id="@+id/action_clear_history"
         android:title="@string/action_clear_history"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_set_home"
+        android:title="@string/action_set_home"
         app:showAsAction="never"/>
 
     <item android:id="@+id/action_add_to_bookmarks"
