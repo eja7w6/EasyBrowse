@@ -217,6 +217,10 @@ public class BrowseActivity extends AppCompatActivity
     private void openBookmarksActivity()
     {
         Intent intent = new Intent(this, OpenBookmarksActivity.class);
+        Bundle bundle = new Bundle();
+
+        bundle.putParcelable("BookmarkList",bookmarks);
+
         startActivity(intent);
     }
 

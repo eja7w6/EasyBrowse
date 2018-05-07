@@ -7,9 +7,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import java.util.Vector;
 
 public class OpenBookmarksActivity extends AppCompatActivity
 {
+    Vector<String> bookmarks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -20,6 +23,13 @@ public class OpenBookmarksActivity extends AppCompatActivity
         Toolbar menuToolbar = (Toolbar) findViewById(R.id.menu_toolbar);
         setSupportActionBar(menuToolbar);
 
+        Bundle extras = getIntent().getExtras();
+
+        if(extras != null)
+        {
+            bookmarks = (Vector<String>) extras.getStringArray("bookmarkList");
+        }
+
         setTitle(R.string.bookmarks_title);
     }
 
@@ -29,6 +39,8 @@ public class OpenBookmarksActivity extends AppCompatActivity
         //Loads items to the app bar from menu.xml.
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.bookmarks_menu, menu);
+
+        ArrayAdapter<String> bookmarkAdapter = new ArrayAdapter<String>(this,R.id.bookmarks_list,)
         return true;
     }
 
